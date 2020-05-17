@@ -1,0 +1,37 @@
+CREATE DATABASE biblioteca;
+
+use biblioteca;
+
+CREATE TABLE aluno(
+    Rm_aluno int(10) NOT null PRIMARY KEY,
+    data_cadastro DATE,
+    nome varchar(100),
+    data_nasc varchar(100),
+    sexo varchar(100),
+    email varchar(100),
+    endereco varchar(100),
+    fone varchar(20),
+    curso varchar(100),
+    modulo varchar(100)
+    );
+    
+CREATE TABLE livro(
+    id_livro Int(10) NOT null PRIMARY KEY AUTO_INCREMENT,
+    exemplar varchar(100),
+    autor varchar(100),
+    edicao varchar(100),
+    ano varchar(100),
+    categoria varchar(100),
+    localizacao varchar(100),
+    descricao varchar(500),
+    disponibilidade varchar(100)
+    );
+   
+CREATE TABLE emprestimo(
+    id_emprestimo int(10) NOT null PRIMARY KEY AUTO_INCREMENT,
+    Rm_aluno int(10),
+    id_livro int(10),
+    data_emprestimo DATE,
+    data_devolucao DATE
+    );
+ 

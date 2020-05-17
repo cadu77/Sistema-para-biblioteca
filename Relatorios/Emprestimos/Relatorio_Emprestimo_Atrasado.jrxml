@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="testee" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="bf6b52bd-a33c-4192-bc5c-7842bedc5602">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="biblioteca"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[SELECT * FROM `emprestimo` WHERE data_devolucao < CURDATE();]]>
+	</queryString>
+	<field name="id_emprestimo" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Rm_aluno" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_livro" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="data_emprestimo" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="data_devolucao" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="91" splitType="Stretch">
+			<line>
+				<reportElement x="20" y="90" width="516" height="1" uuid="0316351f-4af2-419f-8758-feee8d73fe1b"/>
+			</line>
+			<image>
+				<reportElement x="24" y="0" width="166" height="81" uuid="8c916728-7972-4a22-a7b7-15ca8846011c"/>
+				<imageExpression><![CDATA["C:\\SistemaBiblioteca\\src\\imagens\\logo1.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="287" y="2" width="249" height="88" uuid="1175cea6-0193-4a3c-8808-317652847c9d"/>
+				<imageExpression><![CDATA["C:\\SistemaBiblioteca\\src\\imagens\\logo2.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="55" splitType="Stretch">
+			<staticText>
+				<reportElement x="20" y="32" width="257" height="23" uuid="afab587f-5679-4e18-b15e-db3522ee0046"/>
+				<textElement>
+					<font fontName="Arial" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Empréstimos com atrasos]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="81" splitType="Stretch">
+			<staticText>
+				<reportElement x="20" y="61" width="75" height="20" uuid="6c07d923-0994-4cbc-8375-f767109194b8"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID Empréstimo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="61" width="34" height="20" uuid="30bad8b2-0b62-4fc9-a730-560f02913cdb"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[RM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="178" y="61" width="85" height="20" uuid="6eac8e04-645c-4c88-bcef-fcffbd139fdb"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID Livro]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="277" y="61" width="110" height="20" uuid="e4bebf1b-e7c2-4c5f-bffa-8b6e73c65cf0"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Data Empréstimo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="61" width="110" height="20" uuid="bb3bce0c-5c1f-4051-b7ee-5493b5f66bc0"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Data Devolução]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="34" y="0" width="44" height="20" uuid="34e3db3f-fcd5-453e-9e77-946e137191e0"/>
+				<textFieldExpression><![CDATA[$F{id_emprestimo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="0" width="24" height="20" uuid="25bbba12-ef42-4dde-9fcb-506afd59ccd3"/>
+				<textFieldExpression><![CDATA[$F{Rm_aluno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="0" width="73" height="20" uuid="8d0c0b15-dcda-47b7-815c-a1234fb651bf"/>
+				<textFieldExpression><![CDATA[$F{id_livro}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="287" y="0" width="100" height="20" uuid="445aa03a-38ff-410f-a105-2ac32f807d53"/>
+				<textFieldExpression><![CDATA[$F{data_emprestimo}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="420" y="0" width="100" height="20" uuid="6d595d04-3281-47c3-9a1c-92711772457f"/>
+				<textFieldExpression><![CDATA[$F{data_devolucao}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<staticText>
+				<reportElement x="227" y="25" width="100" height="20" uuid="af491e66-8a3f-4f94-9002-5a6eb3f7041c"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Centro Paula Souza ]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="34" y="34" width="100" height="20" uuid="e9ff3a8d-a658-45e5-8f24-7ceb20354da0"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="434" y="34" width="80" height="20" uuid="9d83cf2e-6031-4a9c-aeca-89b06cfe571d"/>
+				<textElement textAlignment="Right">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="514" y="34" width="40" height="20" uuid="fca3aa3d-7783-4e1e-b8fc-e6fbf79129c1"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
