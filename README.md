@@ -6,7 +6,7 @@ Status: Concluido ✔️
 
 # Sistema para gerenciamento de biblioteca, desenvolvido para a Etec Uirapuru. 
 
-### É uma aplicação Desketop planejada para resolver o problema de emprestimo e controle de alunos da biblioteca Etec Uirapuru, É um sistema que podemos cadastrar alunos e livros, e podemos gerenciar os emprestimos, atrasos e devoloções de livros.
+É uma aplicação Desketop planejada para resolver o problema de emprestimo e controle de alunos da biblioteca Etec Uirapuru, É um sistema que podemos cadastrar alunos e livros, e podemos gerenciar os emprestimos, atrasos e devoloções de livros.
 
 ## Campos para cadastro de Aluno:
 
